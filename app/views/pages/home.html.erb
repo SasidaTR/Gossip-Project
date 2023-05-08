@@ -1,0 +1,16 @@
+<h1 class="row justify-content-center mb-5"> Bienvenue sur The Gossip Project</h1>
+<h3 class="row justify-content-center mb-5" style="color:#ff60aa ">Les derniers ragots en vogue ↓</h3>
+
+
+<div class="container row justify-content-center">
+<% @gossips.each do |gossip| %>
+
+<div class="card mb-3 mx-2 card-home" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %></h5>
+    <p class="card-text"><em><%= gossip.content %></em></p>
+    <a href="potin/<%=gossip.id%>" class="btn" style="color:#ff60aa">Voir les détails</a>
+  </div>
+</div>
+<% end %>
+</div>
